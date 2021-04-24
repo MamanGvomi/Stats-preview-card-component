@@ -6,17 +6,24 @@
     font-family: "InterBold";
     src: url("./static/Inter-SemiBold.ttf");
     }
-
+html{
+    height: 99%;
+}
 body{
     font-size: 15px;
     color :hsl(0, 0%, 100%);
     font-family: 'InterLight', Arial, sans-serif;
+    display: flex;
+    height: 100%;
+    justify-content: center;
 }
 
 .flavio{
     background-color: hsl(233, 47%, 7%);
     display: flex;
     justify-content: center;
+    align-items: center;
+    height: 100%;
 }
 .mainDiv{
     display: flex;
@@ -42,7 +49,7 @@ body{
     align-items: center;
     margin: 8%;
     padding: 0%;
-    border-radius: 2%;
+    border-radius: 0.6em;
 }
 
 .card h1{
@@ -80,15 +87,32 @@ h1{
     justify-content: flex-end;
 }
 @media(max-width:375px){
-    .card{
+
+    html{
+        min-height: 99%;
+    }
+
+    .flavio{
+        min-height: 100%;
+    }
+
+    .mainDiv{
+        margin: 6%;
+        min-height: 100%;
         justify-content: center;
-        flex-wrap: wrap;
+    }
+
+    .card{
+        justify-content: flex-start;
+        flex-direction: column;
+        min-height: 100%;
     }
     .textHolder{
         order: 1;
         justify-content: center;
         text-align: center;
     }
+
     .container{
         flex-wrap: wrap;
 
@@ -96,5 +120,14 @@ h1{
     .container div{
         flex: 1 1 100%;
         justify-content: center;
+    }
+    .imgHolder{
+        flex: 0 1 auto;
+        justify-content: center;
+        align-items: center;
+    } 
+    img{
+        width: 90vw;
+        border-radius: 0.6em 0.6em 0em 0em !important;
     }
 }
